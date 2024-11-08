@@ -32,4 +32,9 @@ export class PetService {
     const updateUrl = `$(this.url)/(pet.id)`;
     return this.http.put<PetInterface>(updateUrl, pet, httOption);
   }
+
+  deletePet(pet:PetInterface):Observable<PetInterface> {
+    const deleteUrl = `$(this.url)/(pet.id)`;
+    return this.http.delete<PetInterface>(deleteUrl);
+  }
 }

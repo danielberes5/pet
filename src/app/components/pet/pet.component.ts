@@ -12,10 +12,16 @@ export class PetComponent implements OnInit{
   @Input() pet: PetInterface;
 
   @Output() onAddFavorite: EventEmitter<PetInterface> = new EventEmitter();
+  @Output() onDeletePet: EventEmitter<PetInterface> = new EventEmitter();
 
   onFavorite(){
     console.log("Favorite");
     this.onAddFavorite.emit();
+  }
+
+  onDelete(pet:PetInterface){
+    console.log("Delete",pet);
+    this.onDeletePet.emit(pet);
   }
 
   constructor() {

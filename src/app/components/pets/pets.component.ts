@@ -24,4 +24,8 @@ export class PetsComponent implements OnInit {
     this.petsService.updatePetFavorite(pet).subscribe();
   }
 
+  deletePet(pet: PetInterface) {
+    this.petsService.deletePet(pet).subscribe(() => this.pets = this.pets.filter(item => item.id !== pet.id));
+  }
+
 }
