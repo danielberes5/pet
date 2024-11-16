@@ -15,13 +15,15 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import { AddPetComponent } from './components/add-pet/add-pet.component';
 import {FormsModule} from "@angular/forms";
+import { AboutPageComponent } from './components/about-page/about-page.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PetComponent,
     PetsComponent,
-    AddPetComponent
+    AddPetComponent,
+    AboutPageComponent
   ],
   imports: [
     BrowserModule,
